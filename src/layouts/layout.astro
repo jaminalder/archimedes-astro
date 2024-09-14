@@ -1,0 +1,115 @@
+---
+import "../styles/styles.css";
+---
+
+<html data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <nav class="sticky top-0 z-50 bg-white">
+            <div class="navbar bg-white md:mx-auto lg:max-w-6xl">
+                <div class="navbar-start">
+                    <img
+                        src="img/logo.jpg"
+                        alt="Logo"
+                        class="w-28 h-auto p-2"
+                    />
+                    <a class="text-xl ml-6 text-blue-900" href="/"
+                        >Schülerkreis Archimedes</a
+                    >
+                </div>
+                <div class="navbar-center hidden lg:flex lg:ml-[20%]">
+                    <ul class="menu menu-horizontal px-1 font-serif">
+                        <li><a href="/#konzept">Konzept</a></li>
+                        <li><a href="/#angebot">Angebot</a></li>
+                        <li><a href="/#team">Team</a></li>
+                        <li><a href="/#unterricht">Unterricht</a></li>
+                        <li><a href="/#preis">Preisübersicht</a></li>
+                        <li><a href="/anmeldung">Anmeldung</a></li>
+                        <li><a href="/#kontakt">Kontakt und Feedback</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <div class="dropdown right-0">
+                        <label tabindex="0" class="btn btn-ghost lg:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                ><path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16"></path></svg
+                            >
+                        </label>
+                        <ul
+                            tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 w-52 right-0 bg-white"
+                        >
+                            <li><a href="/#konzept">Konzept</a></li>
+                            <li><a href="/#angebot">Angebot</a></li>
+                            <li><a href="/#team">Team</a></li>
+                            <li><a href="/#unterricht">Unterricht</a></li>
+                            <li><a href="/#preis">Preisübersicht</a></li>
+                            <li><a href="/anmeldung">Anmeldung</a></li>
+                            <li>
+                                <a href="/#kontakt">Kontakt und Feedback</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div
+            class="bg-white flex flex-col z-0 relative w-full mx-auto lg:max-w-6xl"
+        >
+            <slot />
+        </div>
+
+        <footer
+            class="grid grid-cols-1 mt-8 px-6 bg-gray-800 text-gray-100 mb-0 py-6"
+        >
+            <div class="relative w-full py-0 mx-auto lg:max-w-6xl">
+                <h4 class="font-bold mb-3">
+                    Lerninstitut Schülerkreis Archimedes
+                </h4>
+                <p>Burgstrasse 10, 8750 Glarus</p>
+                <div
+                    class="flex flex-row justify-start items-center text-blue-400"
+                >
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        class="w-5 h-5"
+                    >
+                        <path
+                            d="M3 4a2 2 0 00-2 2v1.161l8.441 4.221a1.25 1.25 0 001.118 0L19 7.162V6a2 2 0 00-2-2H3z"
+                        ></path>
+                        <path
+                            d="M19 8.839l-7.77 3.885a2.75 2.75 0 01-2.46 0L1 8.839V14a2 2 0 002 2h14a2 2 0 002-2V8.839z"
+                        ></path>
+                    </svg><a
+                        class="ml-3"
+                        href="mailto:info@lerninstitut-archimedes.ch"
+                        >info@lerninstitut-archimedes.ch</a
+                    >
+                </div>
+                <p><a href="tel:+41556402093">055 640 20 93</a></p>
+                <p><a href="tel:+41788379535">078 837 95 35</a></p>
+                <p>
+                    <a href="mailto:info@lerninstitut-archimedes.ch"
+                        >info@lerninstitut-archimedes.ch</a
+                    >
+                </p>
+                <p>© Schülerkreis Archimedes alle Rechte vorbehalten.</p>
+            </div>
+        </footer>
+    </body>
+</html>

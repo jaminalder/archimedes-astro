@@ -1,0 +1,117 @@
+---
+import Layout from "../layouts/layout.astro";
+const rurl = Astro.url.origin + "/#anmeldung_success";
+---
+
+<Layout>
+    <div class="bg-blue-300 text-center py-6 my-12 scroll-m-24" id="angebot">
+        <h1 class="text-4xl md:text-6xl font-serif">Anmeldung</h1>
+    </div>
+    <form action="https://submit-form.com/hO2KAwPpa">
+        <div class="flex flex-col space-y-6 px-6 items-center">
+            <input type="hidden" name="_redirect" value={rurl} />
+            <input type="hidden" name="_append" value="false" />
+            <input
+                type="text"
+                name="vorname_schueler"
+                placeholder="Name, Vorname des/der Schülers/in"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="geburtsdatum"
+                placeholder="Geburtsdatum"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="adresse"
+                placeholder="Wohnort, Strasse, Nr."
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="telefon_privat"
+                placeholder="Telefon privat"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="telefon_mobil"
+                placeholder="Mobiltelefon"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="email_schueler"
+                placeholder="E-Mail-Adresse des/der Schülers/in"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="name_erziehungsberechtigte"
+                placeholder="Name der Erziehungsberechtigten"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="email_erziehungsberechtigte"
+                placeholder="E-Mail-Adresse der Erziehungsberechtigten"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="schule"
+                placeholder="Schule / Schulstufe"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <textarea
+                name="bereich"
+                class="textarea textarea-bordered w-full max-w-sm h-32"
+                placeholder="Bitte geben Sie an, in welchem Bereich wir Sie unterstützen dürfen"
+            ></textarea>
+
+            <div class="items-start text-left w-full max-w-sm">
+                <p class=""></p>Unterrichtsart
+            </div>
+            <label
+                class="w-full max-w-sm p-3 has-[:checked]:bg-blue-50 has-[:checked]:text-blue-900 has-[:checked]:ring-blue-200"
+            >
+                <input
+                    type="radio"
+                    name="unterrichtsart"
+                    class="checked:border-blue-900"
+                />
+                Gruppenunterricht
+            </label>
+            <label
+                class="w-full max-w-sm p-3 has-[:checked]:bg-blue-50 has-[:checked]:text-blue-900 has-[:checked]:ring-blue-200"
+            >
+                <input
+                    type="radio"
+                    name="unterrichtsart"
+                    class="checked:border-blue-900"
+                />
+                Einzelunterricht
+            </label>
+
+            <input
+                type="text"
+                name="lektionen_woche"
+                placeholder="Lektionen / Woche"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="tage_zeiten"
+                placeholder="Mögliche Unterrichtstage (mit Zeitangabe)"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <button
+                type="submit"
+                class="btn bg-blue-900 text-white hover:text-blue-900 w-full max-w-sm"
+                >anmelden</button
+            >
+        </div>
+    </form>
+</Layout>
