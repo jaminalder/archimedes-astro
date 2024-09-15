@@ -177,7 +177,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </div>
     </div>
 
-    <div class="bg-blue-300 text-center py-6 my-12 scroll-m-24" id="angebot">
+    <div class="bg-blue-300 text-center py-6 my-8 scroll-m-24" id="angebot">
         <h1 class="text-4xl md:text-6xl font-serif">Unser Angebot</h1>
     </div>
 
@@ -239,7 +239,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </div>
     </div>
 
-    <div class="bg-blue-300 text-center py-6 my-12 scroll-m-24" id="team">
+    <div class="bg-blue-300 text-center py-6 my-8 scroll-m-24" id="team">
         <h1 class="text-4xl md:text-6xl font-serif">Unser Team</h1>
     </div>
 
@@ -307,7 +307,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </div>
     </div>
 
-    <div class="bg-blue-300 text-center py-6 my-12 scroll-m-24" id="unterricht">
+    <div class="bg-blue-300 text-center py-6 my-8 scroll-m-24" id="unterricht">
         <h1 class="text-4xl md:text-6xl font-serif">Unser Unterricht</h1>
     </div>
 
@@ -366,7 +366,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </div>
     </div>
 
-    <div class="bg-blue-300 text-center py-6 my-12 scroll-m-24" id="kontakt">
+    <div class="bg-blue-300 text-center py-6 my-8 scroll-m-24" id="kontakt">
         <h1 class="text-4xl md:text-6xl font-serif">Kontakt und Feedback</h1>
     </div>
 
@@ -455,8 +455,10 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         if (currentIndex > images.length - 1) {
             currentIndex = 0;
         }
-        var imgElement = document.getElementById("imageSlider");
-        imgElement.src = images[currentIndex];
+        var imgElement = document.getElementById("imageSlider") as HTMLImageElement;
+        if (imgElement) {
+            imgElement.src = images[currentIndex];
+        }
     }
 
     setInterval(changeImage, 5000);
