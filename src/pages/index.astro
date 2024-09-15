@@ -6,14 +6,14 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
 <Layout>
     <div class="toast mb-5">
         <a class="btn btn-circle glass" href="https://wa.me/41791364638">
-            <img src="img/64px-WhatsApp.svg.png" />
+            <img src="/img/64px-WhatsApp.svg.png" />
         </a>
     </div>
 
     <div class="relative w-full overflow-hidden">
         <img
             id="imageSlider"
-            src="img/zimmer1.jpg"
+            src="/img/zimmer1.jpg"
             class="w-full object-cover animate-zoom"
         />
         <div
@@ -190,7 +190,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 mt-12">
-            <img class="object-cover w-96 mx-auto" src="img/mathe.jpg" />
+            <img class="object-cover w-96 mx-auto" src="/img/mathe.jpg" />
             <div class="">
                 <p class="text-3xl my-4 text-center">Mathematik und Physik</p>
                 <ul class="list-disc ml-8">
@@ -206,7 +206,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         <div class="grid grid-cols-1 md:grid-cols-2 mt-12">
             <img
                 class="mt-8 object-cover w-96 mx-auto"
-                src="img/sprachen.jpg"
+                src="/img/sprachen.jpg"
             />
             <div>
                 <p class="text-3xl my-4 text-center">Sprachen</p>
@@ -226,7 +226,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 mt-12">
-            <img class="mt-8 object-cover w-96 mx-auto" src="img/angebot.jpg" />
+            <img class="mt-8 object-cover w-96 mx-auto" src="/img/angebot.jpg" />
             <div>
                 <p class="text-3xl my-4 text-center">Auf Anfrage</p>
                 <ul class="list-disc ml-8">
@@ -447,7 +447,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
 </Layout>
 
 <script>
-    var images = ["img/zimmer1.jpg", "img/zimmer2.jpg", "img/zimmer3.jpg"];
+    var images = ["/img/zimmer1.jpg", "/img/zimmer2.jpg", "/img/zimmer3.jpg"];
     var currentIndex = 0;
 
     function changeImage() {
