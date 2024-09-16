@@ -29,7 +29,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         <h1 class="text-4xl md:text-6xl font-serif">Unser Konzept</h1>
     </div>
 
-    <div class="mt-8 px-6">
+    <div class="mt-4 px-6">
         <p class="text-2xl text-center font-light">
             Seit über 20 Jahren steht in unserem Lerninstitut das Lernen bei
             qualifizierten und geschulten Lehrpersonen im Mittelpunkt. Durch die
@@ -181,7 +181,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         <h1 class="text-4xl md:text-6xl font-serif">Unser Angebot</h1>
     </div>
 
-    <div class="mt-8 px-6">
+    <div class="mt-4 px-6">
         <p class="text-xl mb-4 text-center font-light">
             Dem Schülerkreis-Archimedes-Team ist es von höchster Wichtigkeit,
             den Schülern das Lernen zu erleichtern und sie für den Aufbau ihres
@@ -243,7 +243,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         <h1 class="text-4xl md:text-6xl font-serif">Unser Team</h1>
     </div>
 
-    <div class="mt-8 px-6">
+    <div class="mt-4 px-6">
         <div class="">
             <div
                 class="bg-blue-900 font-bold text-white text-center py-2 rounded-t-2xl"
@@ -311,7 +311,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         <h1 class="text-4xl md:text-6xl font-serif">Unser Unterricht</h1>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-8 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 px-6">
         <div class="text-2xl mb-8 md:mx-3 font-light">
             <p class="my-3">Intensive Einzelbetreuung</p>
             <p class="my-3">
@@ -370,7 +370,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         <h1 class="text-4xl md:text-6xl font-serif">Kontakt und Feedback</h1>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-8 px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-4 px-6">
         <div class="w-full mb-8 md:px-3">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2718.9939447515026!2d9.066922076408458!3d47.04034962690807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47852dadf68eef51%3A0x97a268050aeba2c3!2sSch%C3%BClerkreis%20Archimedes!5e0!3m2!1sen!2sch!4v1693147313818!5m2!1sen!2sch"
@@ -400,6 +400,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
                         name="Name"
                         placeholder="Name"
                         class="input input-bordered w-full max-w-sm"
+                        required
                     />
                     <input
                         type="text"
@@ -416,7 +417,8 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
                     <textarea
                         name="Nachricht"
                         class="textarea textarea-bordered w-full max-w-sm h-32"
-                        placeholder="Nachricht"></textarea>
+                        placeholder="Nachricht"
+                        required />
                     <button
                         type="submit"
                         class="btn bg-blue-900 text-white hover:text-blue-900 w-full max-w-sm"
