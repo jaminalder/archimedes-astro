@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/layout.astro";
-const kontaktRurl = Astro.url.origin + "/#kontakt_success";
 ---
 
 <Layout>
@@ -226,7 +225,10 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 mt-12">
-            <img class="mt-8 object-cover w-96 mx-auto" src="/img/angebot.jpg" />
+            <img
+                class="mt-8 object-cover w-96 mx-auto"
+                src="/img/angebot.jpg"
+            />
             <div>
                 <p class="text-3xl my-4 text-center">Auf Anfrage</p>
                 <ul class="list-disc ml-8">
@@ -393,7 +395,12 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
             </p>
             <form action="https://submit-form.com/caNo4qPZ">
                 <div class="flex flex-col space-y-3">
-                    <input type="hidden" name="_redirect" value={kontaktRurl} />
+                    <input
+                        id="contactReturn"
+                        type="hidden"
+                        name="_redirect"
+                        value=""
+                    />
                     <input type="hidden" name="_append" value="false" />
                     <input
                         type="text"
@@ -418,7 +425,7 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
                         name="Nachricht"
                         class="textarea textarea-bordered w-full max-w-sm h-32"
                         placeholder="Nachricht"
-                        required />
+                        required></textarea>
                     <button
                         type="submit"
                         class="btn bg-blue-900 text-white hover:text-blue-900 w-full max-w-sm"
@@ -457,11 +464,28 @@ const kontaktRurl = Astro.url.origin + "/#kontakt_success";
         if (currentIndex > images.length - 1) {
             currentIndex = 0;
         }
-        var imgElement = document.getElementById("imageSlider") as HTMLImageElement;
+        var imgElement = document.getElementById(
+            "imageSlider",
+        ) as HTMLImageElement;
         if (imgElement) {
             imgElement.src = images[currentIndex];
         }
     }
 
     setInterval(changeImage, 5000);
+
+    function getBaseUrl() {
+        return window.location.host;
+    }
+
+    function setContactReturnUrl() {
+        var inputElement = document.getElementById(
+            "contactReturn",
+        ) as HTMLInputElement;
+        if (inputElement) {
+            inputElement.value = window.location.host + '/#kontakt_success';
+        }
+    }
+
+    setContactReturnUrl();
 </script>

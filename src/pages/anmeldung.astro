@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/layout.astro";
-const rurl = Astro.url.origin + "/#anmeldung_success";
 ---
 
 <Layout>
@@ -9,65 +8,77 @@ const rurl = Astro.url.origin + "/#anmeldung_success";
     </div>
     <form action="https://submit-form.com/hO2KAwPpa">
         <div class="flex flex-col space-y-6 px-6 items-center">
-            <input type="hidden" name="_redirect" value={rurl} />
+            <input id="return" type="hidden" name="_redirect" value="" />
             <input type="hidden" name="_append" value="false" />
             <input
                 type="text"
-                name="vorname_schueler"
+                name="Name Schüler"
                 placeholder="Name, Vorname des/der Schülers/in"
                 class="input input-bordered w-full max-w-sm"
                 required
             />
             <input
                 type="text"
-                name="geburtsdatum"
+                name="Geburtsdatum"
                 placeholder="Geburtsdatum"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="adresse"
-                placeholder="Wohnort, Strasse, Nr."
+                name="Strasse"
+                placeholder="Strasse, Nr."
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="telefon_privat"
+                name="Wohnort"
+                placeholder="Wohnort"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="PLZ"
+                placeholder="PLZ"
+                class="input input-bordered w-full max-w-sm"
+            />
+            <input
+                type="text"
+                name="Telefon privat"
                 placeholder="Telefon privat"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="telefon_mobil"
+                name="Telefon mobil"
                 placeholder="Mobiltelefon"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="email_schueler"
+                name="Email Schüler"
                 placeholder="E-Mail-Adresse des/der Schülers/in"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="name_erziehungsberechtigte"
+                name="Name Erziehungsberechtigte"
                 placeholder="Name der Erziehungsberechtigten"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="email_erziehungsberechtigte"
+                name="Email Erziehungsberechtigte"
                 placeholder="E-Mail-Adresse der Erziehungsberechtigten"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="schule"
+                name="Schule"
                 placeholder="Schule / Schulstufe"
                 class="input input-bordered w-full max-w-sm"
             />
             <textarea
-                name="bereich"
+                name="Bereich"
                 class="textarea textarea-bordered w-full max-w-sm h-32"
                 placeholder="Bitte geben Sie an, in welchem Bereich wir Sie unterstützen dürfen"
             ></textarea>
@@ -80,7 +91,8 @@ const rurl = Astro.url.origin + "/#anmeldung_success";
             >
                 <input
                     type="radio"
-                    name="unterrichtsart"
+                    name="Unterrichtsart"
+                    value="Gruppenunterricht"
                     class="checked:border-blue-900"
                 />
                 Gruppenunterricht
@@ -90,7 +102,8 @@ const rurl = Astro.url.origin + "/#anmeldung_success";
             >
                 <input
                     type="radio"
-                    name="unterrichtsart"
+                    name="Unterrichtsart"
+                    value="Einzelunterricht"
                     class="checked:border-blue-900"
                 />
                 Einzelunterricht
@@ -98,13 +111,13 @@ const rurl = Astro.url.origin + "/#anmeldung_success";
 
             <input
                 type="text"
-                name="lektionen_woche"
+                name="Lektionen pro Woche"
                 placeholder="Lektionen / Woche"
                 class="input input-bordered w-full max-w-sm"
             />
             <input
                 type="text"
-                name="tage_zeiten"
+                name="Mögliche Zeiten"
                 placeholder="Mögliche Unterrichtstage (mit Zeitangabe)"
                 class="input input-bordered w-full max-w-sm"
             />
@@ -122,3 +135,16 @@ const rurl = Astro.url.origin + "/#anmeldung_success";
         </div>
     </form>
 </Layout>
+
+<script>
+    function setReturnUrl() {
+        var inputElement = document.getElementById(
+            "return",
+        ) as HTMLInputElement;
+        if (inputElement) {
+            inputElement.value = window.location.host + '/#anmeldung_success';
+        }
+    }
+
+    setReturnUrl();
+</script>
